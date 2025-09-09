@@ -12,6 +12,16 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 Image("littleLemonLogo")
+                    .scaledToFit()
+                    .imageScale(.medium)
+                    .padding(.bottom, 20)
+                    .overlay{
+                        Image("littleLemonLogo")
+                            .scaledToFit()
+                            .imageScale(.medium)
+                            .frame(width: 20, height: 20)
+                            .blur(radius: 5)
+                    }
                 Image(systemName: "keyboard")
                     .imageScale(.large)
                     .foregroundStyle(.tint)
