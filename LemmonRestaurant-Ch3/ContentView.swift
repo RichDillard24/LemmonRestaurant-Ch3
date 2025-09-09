@@ -18,7 +18,7 @@ struct ContentView: View {
                 Text("Hello, Cohort 3!")
                     .padding()
                 NavigationLink(destination:AboutView ()) {
-                    Text("About")
+                    Text("About Us")
                         .foregroundStyle(.blue)
                 }
             }

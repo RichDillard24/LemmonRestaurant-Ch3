@@ -9,7 +9,14 @@ import SwiftUI
 
 struct AboutView: View {
     var body: some View {
-        Text("About View")
+        VStack {
+            Text("Welcome to Little Lemon!")
+                .font(.title)
+                .padding(.bottom)
+            Image("littleLemonLogo")
+                .scaledToFit()
+                .imageScale(.medium)
+        }
     }
 }
 
