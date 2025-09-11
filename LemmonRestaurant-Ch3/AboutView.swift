@@ -25,7 +25,8 @@ struct AboutView: View {
                         .frame(width: 20, height: 20)
                         .blur(radius: 5)
                 }
-        }
+            }
+        .navigationTitle(Text("About Us"))
     }
 }
 
