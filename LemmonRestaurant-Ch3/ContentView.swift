@@ -31,6 +31,10 @@ struct ContentView: View {
                         Text("About Us")
                             .foregroundStyle(.blue)
                 }
+                NavigationLink(destination:ReservationForm()){
+                    Text("Make a Reservation")
+                        .foregroundStyle(.blue)
+                }
             }
         }
         .padding()

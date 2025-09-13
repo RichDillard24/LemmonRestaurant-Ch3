@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct AboutView: View {
+    let userName = "Richard"
+    @State var orders = 11
+    @State var clientName = ""
     var body: some View {
+        
         VStack {
-            Text("Welcome to Little Lemon!")
-                .font(.system(size: 30, weight: .heavy))
-                .italic(true)
+            Text("Welcome \(userName) to Little Lemon!")
+                .font(.title.bold())
+                .italic()
                 .padding(.bottom,45)
             Image("littleLemonLogo")
                 .scaledToFit()
@@ -25,7 +29,18 @@ struct AboutView: View {
                         .frame(width: 20, height: 20)
                         .blur(radius: 5)
                 }
+            Text("You have order \(orders) times")
+            Button("Order again"){
+                orders += 1
             }
+            Button( "reset"){
+                orders = 0
+            }
+            TextField("Enter client name:", text: $clientName)
+                .padding()
+                .textFieldStyle(.roundedBorder)
+            Text("Hi \(clientName)!")
+        }
         .navigationTitle(Text("About Us"))
     }
 }
