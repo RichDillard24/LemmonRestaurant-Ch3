@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AboutView: View {
     let userName = "Richard"
-    @State var orders = 11
+    @State var orders = 1
     @State var clientName = ""
     var body: some View {
         
