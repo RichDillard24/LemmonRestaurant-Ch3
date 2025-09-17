@@ -25,23 +25,24 @@ struct LoginView: View {
                             .frame(width: 20, height: 20)
                             .blur(radius: 5)
                     }
-            TextField(" Enter your name",text:$userName )
-                .textFieldStyle(.roundedBorder)
-                .padding()
-            
-            Button("Log In"){
-                print("Trying to Log in")
+                TextField(" Enter your name",text:$userName )
+                    .textFieldStyle(.roundedBorder)
+                    .padding()
                 
-                if userName == "Richard"{
-                    isLoggedIn = true
-                
+                Button("Log In"){
+                    print("Trying to Log in")
+                    
+                    if userName == "Richard"{
+                        isLoggedIn = true
+                        
+                    }
                 }
+                .navigationTitle("Login")
             }
         }
-            .navigationTitle("Login")
     }
 }
 
-//#Preview {
-  // LoginView()
-}
+ //#Preview {
+  //LoginView()
+//}

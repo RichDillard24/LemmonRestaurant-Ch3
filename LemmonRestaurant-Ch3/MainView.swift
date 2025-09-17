@@ -27,6 +27,7 @@ struct MainView: View {
                     }
                 }
             }else {
+                
                 LoginView(isLoggedIn: $isLoggedIn, userName:$userName)
             }
         }
