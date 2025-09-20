@@ -38,3 +38,11 @@ func calculatePrice(price:Double,)->Double{
     return total
 }
 print(calculatePrice(price: 100))
+
+func greet(name: String) -> String {
+
+return "Hello, \(name)!"
+
+}
+
+print(greet(name: "Alice"))
