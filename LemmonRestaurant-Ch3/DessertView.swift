@@ -14,27 +14,50 @@ struct DessertView: View {
         DessertItem(name:"Fresh Fruit Tart",description: "A buttery pastry crust filled with a sweet mixture of seasonal fruits.", price: 4.99),
         DessertItem(name:"Cherry pie",description:"Fresh cherries locally sourced",price: 4.49),
     ]
+    //let item: DessertItem
     var body: some View {
         
         VStack {
-            HStack {
-                Image(systemName: "fork.knife")
-                    .foregroundColor(.orange)
-                Text("Todays Dessert Menu!")
-                    .font(.title)
-            }
+//            HStack {
+//                Image(systemName: "fork.knife")
+//                    .foregroundColor(.orange)
+//                Text("Todays Dessert Menu!")
+//                    .font(.title)
+//                
+//               
+//            }
             
-            }
             List(dessertMenuItem){dessert in
-                Text(dessert.name)
+                HStack{
+                    Text(dessert.name)
+                    Spacer()
+                    Text(String(dessert.price))
+                    if dessert.price < 7 {
+                        ValueBadge()                }
+                }
                 
-                Text(String(dessert.price))
                 
-}
+                //Spacer()
+                
+            }
             .padding()
+            
+            /* Spacer()
+             if price < 7 {
+             HStack {
+             Image(systemName: "star.fill")
+             .foregroundColor(.green)
+             Text("Value")
+             .font(.caption)
+             }
+             .foregroundColor(.green)
+             .padding(6)
+             .background(Color.green.opacity(0.2))
+             .cornerRadius(6)
+             }*/
         }
     }
-
+}
     
 
            /* List{
@@ -68,7 +91,7 @@ struct DessertView: View {
     }
 }
 */
-         /*   #Preview {
-                DessertView()
-          }
-*/
+#Preview {
+    DessertView()
+}
+

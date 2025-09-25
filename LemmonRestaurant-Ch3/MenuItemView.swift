@@ -15,28 +15,19 @@ struct MenuItemView: View {
             VStack(alignment: .leading){
                 Text(item.name)
                     .font(.headline)
-                
-                Text(String(item.price))
+                Text(item.description)
+                    .font(.subheadline)
+                Text(String(format:"%.2f",item.price))
                     .foregroundColor(Color.secondary)
             }
             Spacer()
+            
             if item.price > 20 {
-                HStack(){
-                    Image(systemName: "star.fill")
-                        .foregroundColor(Color.yellow)
-                    
-                    Text("Premium")
-                        .font(.caption)
-                }
-                .font(.caption)
-                .foregroundColor(.orange)
-                .padding(6)
-                .background(.orange.opacity(0.1))
-                .cornerRadius(6)
+                PremiumBadge()
             }
         }
     }
-}
+} 
 
 /*#Preview {
     MenuItemView()
