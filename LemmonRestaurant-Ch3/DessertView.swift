@@ -18,14 +18,14 @@ struct DessertView: View {
     var body: some View {
         
         VStack {
-//            HStack {
-//                Image(systemName: "fork.knife")
-//                    .foregroundColor(.orange)
-//                Text("Todays Dessert Menu!")
-//                    .font(.title)
-//                
-//               
-//            }
+           HStack {
+               Image(systemName: "fork.knife")
+                  .foregroundColor(.orange)
+                Text("Todays Dessert Menu!")
+                  .font(.title)
+               
+              
+           }
             
             List(dessertMenuItem){dessert in
                 HStack{
