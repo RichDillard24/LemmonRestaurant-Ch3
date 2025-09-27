@@ -24,7 +24,7 @@ struct menuView: View {
         MenuItem(name: "Chicken parmesan",description: "Breaded chicken topped with marinara sauce and melted mozzarella cheese", price: 24.50),
         MenuItem(name: "Vegetarian Chili",description: "A hearty mix of beans, tomatoes, and spices", price: 18.00),
         MenuItem(name: "Macaroni and Cheese",description: "Creamy Guda cheese", price: 12.00),
-        
+        MenuItem(name: "Ceaser Salad",description: "Crisp romaine lettuce, creamy Caesar dressing", price: 14.99)
     ]
     @State private var showDesserts = false
     @State private var showPremium = false

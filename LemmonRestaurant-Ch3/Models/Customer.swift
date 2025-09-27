@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct Customer:Identifiable {
+    let id = UUID()
+    var name: String
+    var email: String
+    var isPremium: Bool
+}
